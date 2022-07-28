@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro '$(find
+  ifm3d_description)/urdf/o3r255_standalone.xacro'"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ifm3d_description)/cfg/view_standalone.rviz" required="true" />
+</launch>

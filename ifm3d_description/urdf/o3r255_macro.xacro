@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<robot name="sensor_o3r255" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="o3r255" params="*origin parent name">
+    <link name="${name}_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://ifm3d_description/meshes/visual/ifm_o3r225.dae"
+                scale="1 1 1"/>
+        </geometry>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://ifm3d_description/meshes/collision/ifm_o3r225.stl"
+                scale="1 1 1"/>
+        </geometry>
+      </collision>
+    </link>
+    <joint name="${name}_joint" type="fixed">
+      <parent link="${parent}" />
+      <child link = "${name}_link" />
+      <xacro:insert_block name="origin" />
+    </joint>
+    <link name="${name}_optical_link">
+    </link>
+    <joint name="${name}_camera_optical_joint" type="fixed">
+      <parent link="${name}_link" />
+      <child link = "${name}_optical_link" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </joint>
+  </xacro:macro>
+</robot>

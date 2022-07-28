@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot name="sensor_o3r255" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find ifm3d_description)/urdf/o3r255_macro.xacro" />
+
+  <link name="world">
+  </link>
+
+  <xacro:o3r255 name="camera0" parent="world">
+    <origin xyz="0 0 0.5" rpy="0 0 ${pi/2}" />
+  </xacro:o3r255>
+</robot>

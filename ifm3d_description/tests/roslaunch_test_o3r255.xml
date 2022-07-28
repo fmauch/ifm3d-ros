@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find ifm3d_description)/launch/view_o2r255.launch"/>
+</launch>

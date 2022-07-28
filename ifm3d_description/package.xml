@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<package format="2">
+  <name>ifm3d_description</name>
+  <version>0.1.0</version>
+  <description>Robot description package for ifm3d sensors</description>
+
+  <maintainer email="support.robotics@ifm.com">ifm CSR group</maintainer>
+
+  <license>Apache 2</license>
+
+  <url type="website">http://ifm3d.com/</url>
+
+  <author email="exner@fzi.de">Felix Exner</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz</exec_depend>
+  <exec_depend>urdf</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <test_depend>roslaunch</test_depend>
+</package>
